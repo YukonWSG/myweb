@@ -1,0 +1,647 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #db060600;
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* Wave styling */
+.bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.7;
+}
+/* Navbar Styling */
+.navbar-light {
+  background-color: #ffffff; /* Subtle lighter shade for modern aesthetics */
+  border-bottom: 2px solid #000000; /* Matches the theme's blue color */
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgb(0, 0, 0); /* Softer shadow for depth */
+  position:absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.7;
+}
+
+.navbar-light:hover {
+  background-color: #ffffff; /* Slightly brighter background on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for interaction */
+}
+
+.navbar-light .navbar-brand {
+  color: #000000; /* Bold and striking blue */
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 2rem;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #000000; /* Lighter blue on hover */
+  transform: scale(1.1); /* Subtle enlargement */
+}
+
+.navbar-nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 2rem; /* Improved spacing between items */
+}
+
+.navbar-light .nav-link {
+  color: #000000; /* Softer gray for default state */
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem; /* Balanced padding for better spacing */
+  border-radius: 25px; /* Rounded pill-shaped buttons */
+  transition: all 0.3s ease;
+  letter-spacing: 0.6px;
+}
+
+.navbar-light .nav-link:hover {
+  color: #ffffff;
+  background-color: #000000; /* Bold blue background for hover */
+  transform: translateY(-3px); /* Floating effect */
+  box-shadow: 0 8px 20px rgba(0, 64, 133, 0.4); /* Glowing hover effect */
+}
+
+.navbar-light .nav-link.active {
+  color: #ffffff;
+  background-color: #0056b3; /* Lighter blue for active links */
+  box-shadow: 0 4px 15px rgba(0, 86, 179, 0.5); /* Subtle emphasis */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  display: none; /* Hidden on larger screens */
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  color: #0056b3;
+}
+
+/* Navbar mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-light {
+    padding: 1rem 1.5rem;
+    border-bottom: none; /* Cleaner look for smaller screens */
+  }
+
+  .navbar-light .navbar-brand {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    display: none; /* Hidden by default */
+    background-color: #f8f9fa; /* Matches navbar color */
+    position: absolute;
+    top: 100%; /* Below navbar */
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #004085; /* Seamless transition */
+  }
+
+  .navbar-nav.show {
+    display: flex; /* Shown when toggled */
+  }
+
+  .navbar-light .nav-link {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-light .nav-link:hover {
+    background-color: #004085;
+  }
+
+  .navbar-toggler {
+    display: block; /* Visible on mobile */
+  }
+}
+
+
+/* General Body Styling */
+.body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle, #ffffff, #e0e0e0);
+  color: #000000;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  opacity: 0.999;
+}
+
+/* Headings Styling */
+.body h1 {
+  font-size: 3.5rem;
+  color: #000000;
+  font-weight: 700;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.body h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 20px 0;
+  position: relative;
+  top:40px;
+
+}
+
+/* Paragraph Styling */
+.body p {
+  font-size: 1.2rem; /* Slightly larger font for better readability */
+  line-height: 1.8; 
+  color: #333333; /* A slightly darker gray for improved contrast */
+  margin: 0 auto 20px; 
+  max-width: 650px; /* Adjusted for better balance */
+  text-align: justify;
+  padding: 15px 25px; /* Added more padding for a cleaner look */
+  background-color: #f9f9f9; /* Softer background color */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 12px; /* Slightly rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #000000; /* Adds a decorative left border */
+}
+
+/* Hover Effect */
+.body p:hover {
+  transform: translateY(-5px); /* Slight elevation on hover */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  background-color: #ffffff; /* Brightens background on hover */
+}
+
+/* Optional: Responsive Adjustments */
+@media (max-width: 768px) {
+  .body p {
+    font-size: 1.1rem; /* Slightly smaller text for smaller screens */
+    padding: 10px 15px; /* Adjusted padding */
+    max-width: 100%; /* Uses full width on small screens */
+  }
+}
+
+
+/* Profile Picture Styling */
+.dp {
+  border-radius: 0%;
+  height: 250px;
+  width: 250px;
+  margin: 50px auto 20px auto; /* Centered with proper spacing */
+  display: block;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+  border: 6px solid #000000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  top: 60px; /* Position adjusted */
+  z-index: 2; /* Keeps the profile on top */
+  background: linear-gradient(135deg, #f6d365, #fda085); /* Adds a gradient background */
+}
+
+/* Hover Effects */
+.dp:hover {
+  transform: scale(1.1); /* Enlarges the image slightly */
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4), 0px 0px 15px rgba(0, 0, 0, 0.6); /* Adds a glow effect */
+  border-color: rgb(185, 185, 185); /* Subtle golden border color */
+}
+
+/* Optional: Adjust positioning for mobile responsiveness */
+@media (max-width: 768px) {
+  .dp {
+    top: 80px; /* Increased top margin for mobile */
+    margin-top: 100px; /* Adds more space on smaller screens */
+    height: 200px; /* Reduces size for smaller screens */
+    width: 200px;
+  }
+}
+
+/* Decorative Divider */
+.divider {
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+/* Call-to-Action Button */
+.body .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.body .cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Background Accent */
+.background-accent {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+  z-index: -1;
+}
+
+
+.hobby-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+  text-align: center;
+  
+}
+
+.hobby-container h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: relative;
+  top: 80px;
+}
+
+.hobby-cards-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.hobby-card {
+  width: 80%;
+  max-width: 20rem;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #cfcece;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  position: relative;
+  top: 60px;
+}
+
+
+.hobby-card h2 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  position: relative;
+  top: auto;
+}
+
+.hobby-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 4px solid #000000;
+  
+}
+
+.hobby-card p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.2;
+  margin: 2px;
+}
+
+.learn-chords-btn, .learn-ball-btn {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 180px;
+  margin-top: 10px;
+}
+
+.learn-chords-btn:hover, .learn-ball-btn:hover {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .hobby-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .hobby-cards-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.education {
+  padding: 30px 50px 50px 50px; /* Adjust padding for top, right, bottom, and left */
+  background-color: rgba(0, 0, 0, 0); /* Use RGBA for transparency */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(255, 228, 228, 0.1);
+  z-index: 1; /* Ensure it is above the background image */
+  margin: 80px auto;
+  opacity: 0.7;
+
+}
+
+
+/* Elementary Section */
+.elementary {
+  font-size: 1.8rem;
+  color: #007bff; /* Blue color */
+  margin-bottom: 50px; /* Slight spacing below the title */
+  margin-top: 50px;
+  position: relative;
+  transform: translateY(-250px); /* Dynamic positioning */
+  transition: transform 0.3s ease, margin-top 0.3s ease; /* Smooth transition for adjustments */
+  margin: 50px auto;
+  
+}
+
+/* Adjust on small screens */
+@media (max-width: 768px) {
+  .elementary {
+    font-size: 1.5rem; /* Slightly smaller font size */
+    margin-top: 10px; /* Less margin for smaller screens */
+    transform: translateY(-100px); /* Adjust vertical position on small screens */
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+  .elementary {
+    font-size: 1.2rem; /* Further reduction for mobile */
+    margin-top: 5px;
+    transform: translateY(-50px); /* Smaller offset on mobile */
+  }
+}
+
+
+.elementary-description {
+  font-size: 1rem;
+  color: #333; /* Dark text color for readability */
+  line-height: 1.6; /* Add line spacing for better readability */
+  top:-220px;
+  position: relative;
+}
+
+/* High School Section */
+.highschool {
+  font-size: 1.8rem;
+  color: #007bff; /* Blue color */
+  margin-top: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  transform: translateY(-170px);
+  
+}
+
+.highschool-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  top: -130px;
+}
+
+/* College Section */
+.college {
+  font-size: 1.8rem;
+  color: #007bff; /* Blue color */
+  margin-top: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  transform: translateY(-20px);
+}
+
+.college-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.ccdps {
+  border-radius: 20%; /* Adjust as needed (50% for circular images) */
+  width: 100px; /* Increased size for better visibility */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center image and add spacing */
+  display: block; /* Ensure proper alignment */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Optional hover effect */
+.ccdps:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+.calhigh {
+  border-radius: 20%; /* Rounded corners */
+  width: 100px; /* Image size */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center image horizontally with spacing */
+  display: block; /* Align image as a block-level element */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  position: relative; /* Enable positioning adjustments */
+  top:180px;
+}
+
+/* Adjust position relative to the container */
+.calhigh-container {
+  position: relative;
+  text-align: center; /* Center the image horizontally */
+  padding: 20px; /* Add space around the image */
+  top:200px;
+}
+
+/* Optional hover effect */
+.calhigh:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+.ncf {
+  border-radius: 20%; /* Rounded corners */
+  width: 100px; /* Image size */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px auto; /* Center image horizontally with spacing */
+  display: block; /* Align image as a block-level element */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  position: relative; /* Enable positioning adjustments */
+  top:420px;
+}
+
+.ncf-container {
+  position: relative;
+  text-align: center; /* Center the image horizontally */
+  padding: 20px; /* Add space around the image */
+  top:200px;
+}
+
+.ncf:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+
+.contact {
+  padding: 50px;
+  background-color: rgba(14, 3, 3, 0); /* Use RGBA for transparency */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure it is above the background image */
+  margin: 80px;
+  opacity: 0.7;
+}
+
+.contact h1 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 1;
+  opacity: 0.7;
+  
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  top:10px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.about {
+  padding: 50px;
+  background: linear-gradient(135deg, #00000000, #00000000); /* Adds a gradient for a soft modern look */
+  border-radius: 12px; /* Slightly rounder corners for a modern feel */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Enhances shadow for better depth */
+  margin: 80px auto;
+  max-width: 800px; /* Centers and limits the width for readability */
+  opacity: 1; /* Set opacity to full for clear visibility */
+  border: 1px solid #00000000; /* Adds a subtle border */
+  opacity: 0.8;
+}
+
+.about h1 {
+  font-size: 2.8rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Adds emphasis */
+  letter-spacing: 2px; /* Adds spacing for a stylish look */
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #000000; /* Slightly darker blue for better contrast */
+  margin-top: 25px;
+  text-transform: capitalize; /* Consistent capitalization */
+  border-left: 4px solid #ffffff00; /* Adds a left border for emphasis */
+  padding-left: 10px; /* Creates spacing between border and text */
+  position: relative;
+  top:15px;
+}
+
+.about p {
+  font-size: 1.2rem;  
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+  word-spacing: 0.1rem; /* Slight spacing for readability */
+}
+
+.about::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 80px;
+  margin: 0 auto 20px auto;
+  background: #ffffff; /* Adds a decorative horizontal line above the section */
+  border-radius: 2px;
+}
+
+.about::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 80px;
+  margin: 20px auto 0 auto;
+  background: #ffffff; /* Adds a decorative horizontal line below the section */
+  border-radius: 2px;
+}
+
+
