@@ -33,7 +33,7 @@ function Education() {
                 {/* College Section */}
                 <h2 className="college">College</h2>
                 <p className="college-description">
-                    I am currently studying at Naga College Foundation with a degree in Computer Science.
+                    I am currently studying at Naga College Foundation taking the course Computer Science.
                 </p>
             </div>
         </div>
