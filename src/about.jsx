@@ -1,6 +1,7 @@
 import React from "react";
 import './index.css';
 import bg from './assets/minecraftbg.jpg';
+import About from './About.jsx';
 
 function About() {
     return (
